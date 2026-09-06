@@ -37,3 +37,15 @@ footer{padding:25px 6vw;display:flex;justify-content:space-between;color:var(--m
 .photo-placeholder.main-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
 .gallery-photo.photo-img{overflow:hidden;padding:0}
 .gallery-photo.photo-img img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* Travel & adventure gallery */
+.adventure-heading .lead{margin-top:-8px;color:var(--muted);max-width:760px}
+.adventure-gallery{grid-template-columns:repeat(3,1fr)}
+.adventure-card{position:relative;overflow:hidden!important;padding:0!important;aspect-ratio:1.15!important;background:#222!important}
+.adventure-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.adventure-card:hover img{transform:scale(1.04)}
+.adventure-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.72));pointer-events:none}
+.photo-caption{position:absolute;left:20px;right:20px;bottom:18px;color:white;z-index:2;text-align:left}
+.photo-caption strong,.photo-caption span{display:block}.photo-caption strong{font-size:16px}.photo-caption span{font-size:11px;margin-top:2px;opacity:.85}
+@media(max-width:800px){.adventure-gallery{grid-template-columns:1fr 1fr}.adventure-card.tall{aspect-ratio:.85!important}}
+@media(max-width:480px){.adventure-gallery{grid-template-columns:1fr}.adventure-card,.adventure-card.tall{aspect-ratio:1.2!important}}
